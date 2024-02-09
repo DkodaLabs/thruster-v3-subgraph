@@ -30,7 +30,8 @@ export let WHITELIST_TOKENS: string[] = [
   '0x956f47f50a910163d8bf957cf5846d573e7f87ca', // FEI
   '0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0', // MATIC
   '0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9', // AAVE
-  '0xfe2e637202056d30016725477c5da089ab0a043a' // sETH2
+  '0xfe2e637202056d30016725477c5da089ab0a043a', // sETH2
+  "0x102c776ddb30c754ded4fdcc77a19230a60d4e4f", // FLC
 ]
 
 let STABLE_COINS: string[] = [
