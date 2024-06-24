@@ -1,21 +1,22 @@
 specVersion: 0.0.4
-description: Uniswap is a decentralized protocol for automated token exchange on Ethereum.
+description: UniV3 subgraph for Thruster
 repository: https://github.com/Uniswap/uniswap-v3-subgraph
 schema:
   file: ./schema.graphql
 graft:
-  base: QmPrb5mvZj3ycUugZgwLWCvK93jfXfhvfjRXrFk4tRmyCX
-  block: 14292820
+  base: QmSk7Q1uJCgb8JAdsH4YBbEucauFnAMV7pcict4NwXjYT3
+  block: 1888098
 features:
   - nonFatalErrors
+  - grafting
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: blast-mainnet
     source:
-      address: '0x1F98431c8aD98523631AE4a59f267346ea31F984'
+      address: '0x71b08f13B3c3aF35aAdEb3949AFEb1ded1016127'
       abi: Factory
-      startBlock: 12369621
+      startBlock: 158600
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -40,11 +41,11 @@ dataSources:
           handler: handlePoolCreated
   - kind: ethereum/contract
     name: NonfungiblePositionManager
-    network: mainnet
+    network: blast-mainnet
     source:
-      address: '0xC36442b4a4522E871399CD717aBDD847Ab11FE88'
+      address: '0x434575EaEa081b735C985FA9bf63CD7b87e227F9'
       abi: NonfungiblePositionManager
-      startBlock: 12369651
+      startBlock: 158600
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -74,7 +75,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pool
-    network: mainnet
+    network: blast-mainnet
     source:
       abi: Pool
     mapping:
